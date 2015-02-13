@@ -1,15 +1,20 @@
 <html>
 <head>
     <title>The American Jobs Project</title>
+    <link rel="stylesheet" type="text/css" href="reset.css">
     <style type="text/css">
         .pikto-entry {
             zoom: 1;
+            display: inline-block;
+        }
+        .tablet {
+            display: none;
         }
 
         .root-container {
             display: block;
             margin: 0 auto;
-            width: 1000px;
+            max-width: 1000px;
         }
         .left-container, .outer-pikto-container {
             display: inline-block;
@@ -24,11 +29,16 @@
         }
         .logo {
             width: 300px;
+            display: inline-block;
+        }
+        .tablet-logo-container {
+            width: 100%;
+            text-align: center;
         }
         .title-container {
             font-family: "Century Gothic", "Halvetica Neue", helvetica, sans-serif;
             font-size: 30px;
-            margin-top: 100px;
+            margin-top: 123px;
             width: 100%;
             margin-left: 17px;
         }
@@ -39,15 +49,20 @@
             height: 0;
             border-bottom: 1px solid #193661;
             width: 100%;
-            margin: 40px 0;
+            margin: 40px 17px;
         }
-        .end {
+        .divider-end {
+            display: block;
+            clear: both;
+            height: 0;
+            border-bottom: 1px solid #193661;
             width: 100px;
             margin: 40px auto;
         }
 
         .text {
-            width: 800px;
+            max-width: 800px;
+            padding: 0 20px;
             margin: 0 auto;
             font-family: "Georgia";
             line-height: 1.4em;
@@ -57,11 +72,55 @@
         .text p {
             margin-bottom: 20px;
         }
+
+        @media (max-width: 800px) {
+            .desktop {
+                display: none;
+            }
+            .tablet {
+                display: block;
+            }
+            .title-container {
+                padding: 0 20px;
+                width: 70%;
+                font-size: 35px;
+            }
+            .outer-pikto-container {
+                display: block;
+                margin: 0 auto;
+            }
+            .text {
+                padding: 0 4%;
+            }
+            .divider {
+                width: 92%;
+                margin: 40px auto;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .outer-pikto-container {
+                display: none;
+            }
+            .title-container {
+                margin-top: 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .title-container {
+                font-size: 30px;
+                line-height: 1.3em;
+            }
+        }
     </style>
 </head>
 <body>
 <div class="root-container">
-    <div class="left-container">
+    <div class="tablet tablet-logo-container">
+        <img class="logo" src="assets/logo.png">
+    </div>
+    <div class="left-container desktop">
         <div class="logo-container">
             <img class="logo" src="assets/logo.png">
         </div>
@@ -73,13 +132,14 @@
             </div>
         </div>
     </div>
+    <div class="tablet title-container">It's no secret that America's middle class is in crisis.</div>
     <div class="divider"></div>
     <div class="text">
         <p>Indeed, "the hollowing out of the middle class" has become a well-worn phrase. Long term unemployment is at record levels. Income inequality today is comparable to that of the Gilded Age. A 2011 study by Nobel economist Michael Spence, The Evolving Structure of the American Economy and the Employment Challenge, underscores that the loss of middle income jobs in America has been due largely to the global shift in manufacturing ("tradable jobs"). Yet, despite these trends, a gridlocked U.S. Congress has failed to adopt robust policies to stoke middle-class jobs in America.</p>
         <p>A clear example where the lack of comprehensive national policy is affecting industry and job growth is in the advanced energy sector. With the alarming global growth of energy consumption, the U.S. has the opportunity to supply the products and solutions that will address the globe's energy needs while reducing carbon pollution, and will create good-paying jobs at home. Our economic competitors are active, only too pleased to take advantage of U.S. passivity in creating clean energy products for export.</p>
         <p>In response to this opportunity, the President and the Department of Energy have recently announced a series of executive branch initiatives to stoke the growth of clean energy and advanced manufacturing. The American Jobs Project (AJP) will build on and leverage those initiatives to construct state-specific roadmaps for policymakers to create good-paying, sustainable jobs in clean energy economic clusters.</p>
     </div>
-    <div class="divider end"></div>
+    <div class="divider-end"></div>
 </div>
 <script>
     (function(d){
