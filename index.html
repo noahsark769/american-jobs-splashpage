@@ -39,7 +39,7 @@
         .title-container {
             font-family: "Century Gothic", "Halvetica Neue", helvetica, sans-serif;
             font-size: 30px;
-            margin-top: 123px;
+            margin-top: 85px;
             width: 100%;
             margin-left: 17px;
         }
@@ -77,6 +77,29 @@
 
         .text p {
             margin-bottom: 20px;
+        }
+
+        .press-release-button {
+            display: block;
+            width: 87%;
+            padding: 10px;
+            margin: 0 auto;
+            border: 1px solid #173661;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            font-family: "Century Gothic", "Halvetica Neue", helvetica, sans-serif;
+            color: #173661;
+        }
+
+        .press-release-button:hover {
+            color: white;
+            background-color: #173661;
+        }
+
+        .press-release-button.mobile {
+            margin-bottom: 20px;
+            width: 278px;
         }
 
         @media (max-width: 800px) {
@@ -125,11 +148,13 @@
 <div class="root-container">
     <div class="tablet tablet-logo-container">
         <img class="logo" src="assets/logo.png">
+        <a class="press-release-button mobile" href="assets/american-jobs-project-press.pdf">Read the press release</a>
     </div>
     <div class="left-container desktop">
         <div class="logo-container">
             <img class="logo" src="assets/logo.png">
         </div>
+        <a class="press-release-button" href="assets/american-jobs-project-press.pdf">Read the press release</a>
         <div class="title-container">It's no secret that America's middle class is in crisis.</div>
     </div><div class="outer-pikto-container">
         <div class="piktowrapper-embed pikto-entry" pikto-uid="4499232-american-jobs-project-map" >
